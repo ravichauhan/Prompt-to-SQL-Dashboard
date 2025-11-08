@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prompt-to-SQL Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="panel">
+        <h1>Prompt-to-SQL Dashboard</h1>
+        <p>Ask a question about the demo sales data. The backend will turn it into SQL and show the live rows.</p>
+        <label for="nl-input">Natural language query</label>
+        <textarea id="nl-input" rows="4" placeholder="Show total orders by month"></textarea>
+        <button id="run-btn">Run query</button>
+        <p class="hint">Backend prompt: "Convert this English query into valid SQL for the following schema..."</p>
+      </section>
+      <section class="panel results">
+        <div class="sql-output">
+          <h2>Generated SQL</h2>
+          <pre id="sql-preview">-- SQL will appear here</pre>
+        </div>
+        <div>
+          <h2>Rows</h2>
+          <table id="results-table"></table>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
